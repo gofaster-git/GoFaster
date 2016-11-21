@@ -24,6 +24,7 @@ var app = express();
 //tell node that My application will use ejs engine for rendering, view engine setup
 app.set('views', path.join(__dirname, 'Views'));
 app.set('view engine', 'ejs');
+app.set('port', process.env.PORT || 8080);
 
 //tell node the global configuration about parser,logger and passport
 app.use(cookieParser());
@@ -53,7 +54,7 @@ initPassport(passport);
 
 
 //running server on node
-var server = app.listen(8080);
+var server = app.listen(app.get('port'));
 //var server = app.listen(8080, function () {
 //  var host = server.address().address;
 //  var port = server.address().port;
