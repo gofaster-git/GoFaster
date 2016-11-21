@@ -1,0 +1,291 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+/* Start -  Below styles used for Result Table Summary*/
+.resultsummaryheader h2 {
+  float: left;
+  padding-bottom: 0.5em;
+  font-size: 1.4em;
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-weight: bold;
+}
+.buttonImage{
+  background-image: url('images/track.gif');
+  position: relative;
+  background-color: transparent;
+  width: 40px;
+  height: 40px
+}
+.tracking-results table {
+    border-collapse: collapse;
+    border-spacing: 2px;
+    border-color: grey;
+    width:100%;
+}
+.tracking-results table th,
+.tracking-results table td {
+  font-size: 11px;
+  line-height: 1.1818181818181819;
+  border-right: 3px solid #ffffff;
+  border-top: 1px solid #d1d1d1;
+  padding: 0.36363636363636365em 0.5454545454545454em;
+  text-align: left;
+  vertical-align: top;
+}
+.tracking-results table th:last-child,
+.tracking-results table td:last-child {
+  border-right: 0;
+}
+.tracking-results table th {
+  background-color: #e8e8e4;
+}
+.tracking-results .tracking-result {
+  clear: both;
+}
+.tracking-results table .result-pieces p {
+  font-size: 11px;
+  line-height: 1.1818181818181819;
+  /*background: url('../../../../../../img/common/icon_plus_rot.gif') no-repeat 0 0.18181818181818182em transparent;*/
+  color: #000000;
+  padding-left: 1.3636363636363635em;
+}
+.displayNone{
+    display: none;
+}
+.displayBlock{
+    display: block;
+}
+.tracking-results table .result-pieces p:hover {
+  cursor: pointer;
+  color: #cc0000;
+  text-decoration: underline;
+}
+
+.tracking-results table.result-summary {
+  border-bottom: 1px solid #d1d1d1;
+  margin-bottom: .5em;
+}
+.tracking-results table.result-summary .column-delivery-state {
+  width: 5%;
+}
+.tracking-results table.result-summary .column-waybill {
+  width: 32%;
+}
+.tracking-results table.result-summary .column-destination {
+  width: 63%;
+}
+.tracking-results table.result-summary.result-has-edd .column-destination,
+.tracking-results table.result-summary.result-has-pieces .column-destination {
+  width: 39%;
+}
+.tracking-results table.result-summary.result-has-edd .column-pieces,
+.tracking-results table.result-summary.result-has-pieces .column-pieces {
+  width: 24%;
+}
+.tracking-results table.result-summary td {
+  background-color: #e8e8e4;
+  border: none;
+}
+.tracking-results table.result-summary td span {
+  display: block;
+  font-weight: bold;
+}
+.tracking-results table.result-summary td.delivery {
+  background-position: 50% 1.6em;
+  background-repeat: no-repeat;
+}
+.tracking-results table.result-summary td.delivery.code100 {
+  background-image: url('../../../../../../tracking/img/icon-blank.gif');
+}
+.tracking-results table.result-summary td.delivery.code101 {
+  background-image: url('images/icon-delivered.gif');
+}
+.tracking-results table.result-summary td.delivery.code102 {
+  background-image: url('../../../../../../tracking/img/icon-in-transit.gif');
+}
+.tracking-results table.result-summary td.delivery.code103 {
+  background-image: url('../../../../../../tracking/img/icon-exception.gif');
+}
+.tracking-results .tracking-result table.result-summary td.delivery.code104 {
+  background-image: url('../../../../../../tracking/img/icon-departed.gif');
+}
+.tracking-results .tracking-result table.result-summary td.delivery.code105 {
+  background-image: url('../../../../../../tracking/img/icon-manifest-received.gif');
+}
+.tracking-results .tracking-result table.result-summary td.delivery.code106 {
+  background-image: url('../../../../../../tracking/img/icon-clearance-delay.gif');
+}
+.tracking-results .tracking-result table.result-summary td.delivery.code107 {
+  background-image: url('../../../../../../tracking/img/icon-please-contact.gif');
+}
+.tracking-results .tracking-result table.result-summary td.delivery.code108 {
+  background-image: url('../../../../../../tracking/img/icon-shipper-contacted.gif');
+}
+.tracking-results table.result-summary td.waybill strong {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5em;
+}
+.tracking-results table.result-summary td.waybill span {
+  color: #cc0000;
+  margin-bottom: 0.2em;
+}
+.tracking-results table.result-summary td.waybill.result-has-no-remarks span.result-signature-epod a:link,
+.tracking-results table.result-summary td.waybill.result-has-no-remarks span.result-signature-epod a:visited {
+  color: #cc0000;
+}
+.tracking-results table.result-summary td.waybill.result-has-no-remarks span.result-signature-epod a:hover,
+.tracking-results table.result-summary td.waybill.result-has-no-remarks span.result-signature-epod a:active,
+.tracking-results table.result-summary td.waybill.result-has-no-remarks span.result-signature-epod a:focus {
+  color: #cc0000;
+}
+.tracking-results table.result-summary td .result-edd span {
+  font-weight: normal;
+}
+.tracking-results table.result-summary td .result-edd span.result-eddd-label {
+  font-weight: bold;
+}
+.tracking-results table.result-summary td .result-edd span.result-eddd-label-text {
+  font-weight: normal;
+}
+.tracking-results table.result-summary td .result-edd span.result-eddd-date-text {
+  font-weight: normal;
+}
+.tracking-results table.result-summary td .result-edd span.result-eddd-product-text {
+  font-weight: normal;
+}
+.tracking-results table.result-summary td .result-edd span.eddd-label-red {
+  color: #cc0000;
+}
+.tracking-results table.result-summary td .result-edd span.eddd-text-red {
+  color: #cc0000;
+}
+.tracking-results table.result-summary tr.result-event-remarks {
+  border-bottom: 1px solid #d1d1d1;
+  border-top: 1px solid #d1d1d1;
+}
+.tracking-results table.result-summary tr.result-event-remarks td strong {
+  background: url('../../../../../../img/common/icon_plus_rot.gif') no-repeat 80% 0 transparent;
+  display: block;
+  height: 1em;
+}
+.tracking-results table.result-summary tr.result-event-remarks td strong.close {
+  background-image: url('../../../../../../img/common/icon_minus_grau.gif');
+}
+.tracking-results table.result-summary tr.result-event-remarks td strong:hover {
+  cursor: pointer;
+}
+.tracking-results table.result-summary tr.result-event-remarks td span {
+  color: #cc0000;
+}
+.tracking-results table.result-summary tr.result-event-remarks td p {
+  font-size: 11px;
+  font-size: 0.6875rem;
+  line-height: 1.1818181818181819;
+  color: #000000;
+  display: none;
+  padding: 0;
+}
+.tracking-results table.result-checkpoints {
+  display: none;
+  margin: .8em 0;
+}
+.tracking-results table.result-checkpoints.show {
+  display: table;
+}
+.tracking-results table.result-checkpoints .column-counter {
+  width: 5%;
+}
+.tracking-results table.result-checkpoints .column-description {
+  width: 32%;
+}
+.tracking-results table.result-checkpoints .column-location {
+  width: 54%;
+}
+.tracking-results table.result-checkpoints .column-time {
+  width: 9%;
+}
+.tracking-results table.result-checkpoints.result-has-pieces .column-location {
+  width: 30%;
+}
+.tracking-results table.result-checkpoints.result-has-pieces .column-piece {
+  width: 24%;
+}
+.tracking-results .tracking-result table.result-extra-shipment-details {
+  display: none;
+  margin-bottom: .8em;
+}
+.tracking-results .tracking-result table.result-extra-shipment-details.show {
+  display: table;
+}
+.tracking-results .tracking-result table.result-extra-shipment-details .column-from {
+  width: 37%;
+}
+.tracking-results .tracking-result table.result-extra-shipment-details .column-to {
+  width: 30%;
+}
+.tracking-results .tracking-result table.result-extra-shipment-details .column-information {
+  width: 33%;
+}
+.tracking-results .tracking-result table.result-extra-shipment-details th,
+.tracking-results .tracking-result table.result-extra-shipment-details td {
+  border: 1px solid #d1d1d1;
+}
+.tracking-results .tracking-result table.result-extra-shipment-details th:last-child,
+.tracking-results .tracking-result table.result-extra-shipment-details td:last-child {
+  border: 1px solid #d1d1d1;
+}
+.tracking-results .tracking-result table.result-extra-shipment-details th a {
+  background: url('../../../../../../img/common/g_arrow_red.gif') 0 0.09090909090909091em no-repeat;
+  float: right;
+  padding-left: 0.7272727272727273em;
+}
+.tracking-results .tracking-result table.result-extra-shipment-details span {
+  display: block;
+}
+.tracking-results .tracking-result table.result-extra-shipment-details span.note-on-weight {
+  color: #cc0000;
+  float: right;
+}
+.tracking-results .result-details-toggle a,
+.tracking-results .result-details-toggle-all a {
+  font-weight: bold;
+}
+.tracking-results .result-details-toggle {
+  padding: 0 0 2em;
+}
+.tracking-results .result-details-toggle-all {
+  float: right;
+  padding: 0 0 0.5em;
+  text-align: right;
+}
+.tracking-results .result-epods a {
+  color: #cc0000;
+  font-weight: bold;
+}
+
+/* End - Above styles used for Result Table Summary*/
+/*==============================================================*/
+/* Start -  Below styles used for Result Table*/
+
+/* End - Above styles used for Result Table*/

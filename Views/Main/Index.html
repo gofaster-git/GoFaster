@@ -1,0 +1,123 @@
+﻿<style>
+   input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+</style>
+<script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">I'm a modal!</h3>
+        </div>
+        <div class="modal-body">
+            <ul>
+                <li ng-repeat="item in items">
+                    <a href="#" ng-click="$event.preventDefault(); selected.item = item">{{ item }}</a>
+                </li>
+            </ul>
+            Selected: <b>{{ selected.item }}</b>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+</head>
+<div>
+    <div class="col-lg-6" style="margin: 1% 30%;">
+        <div class="input-group">
+            <span class="input-group-btn">
+          <input required="required" id="awbNumber" ng-model="awbNumber" type="number" class="form-control" placeholder="Tracking number...">
+        <button class="btn btn-primary" type="button" style="" ng-click="callingTrack()" >Track!</button>
+        <button class="btn btn-primary" type="button" style="" ng-click="reset()" >Reset</button>
+      </span>
+        </div>
+    </div>
+<!--<div class="resultsummaryheader">
+<h4>Result Summary</h4>
+</div>-->
+    <div class="tracking-results">
+
+        <!--=======================================================-->
+        <!--<table class="result-summary result-has-pieces">
+            <colgroup>
+                <col class="column-delivery-state">
+                <col class="column-waybill">
+                <col class="column-destination">
+                <col class="column-pieces">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <td class="delivery code101" title="DELIVERED"></td>
+                    <td class="waybill">
+                        <strong>Waybill: {{123456}}</strong>
+                        <span>Signed for by:
+                    Mani Kumar
+				</span>
+                    </td>
+                    <td>
+                        <span><strong>Friday, September 23, 2016  at 13:35</strong></span>
+                        <span>Origin Service Area:</span>
+                        <a class="arrow" target="_blank" href="http://www.dhl.co.uk/en/country_profile.html">BIRMINGHAM - TOWCESTER - UK</a>
+                        <span>Destination Service Area:</span>
+                        <a class="arrow" target="_blank" href="http://www.dhl.fi/en/country_profile.html">TURKU - TURKU - FINLAND</a>
+                    </td>
+                    <td>
+                        <div class="result-pieces">
+                            <p class=""><a ng-click="clickOnPeices()">2 Pieces</a></p>
+                            <ul id="peice_Id" ng-class="{'displayNone':!isDisplay, 'displayBlock': isDisplay}">
+                                <li>JD013054788779626641</li>
+                                <li>JD013054788779626642</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>-->
+        <!--=======================================================-->
+
+        <!--=======================================================-->
+        <table class="result-checkpoints show result-has-pieces" style="display: table;">
+            <colgroup>
+                <col class="column-counter">
+                <col class="column-description">
+                <col class="column-location">
+                <col class="column-time">
+                <col class="column-piece">
+            </colgroup>
+            <tbody ng-repeat="group in headers | orderBy:'Date':true">
+                <tr>
+                    <th colspan="2">
+                        {{group["0"].Date["0"] | date:'fullDate'}}
+                    </th>
+                    <th>
+                        Location
+                    </th>
+                    <th>
+                        Time
+                    </th>
+                    <th>
+                        Peices
+                    </th>
+                </tr>
+
+                <tr ng-repeat="rowValue in group">
+                    <td>
+                        {{group.length-$index}}
+                    </td>
+                    <td>
+                        {{rowValue.ServiceEvent["0"].Description["0"]}}
+                    </td>
+                    <td>{{rowValue.ServiceArea["0"].Description["0"]}}</td>
+                    <td>{{rowValue.Time["0"] | limitTo: 5}}</td>
+                    <td>{{noOfPeices}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <!--=======================================================-->
+        
+    </div>
+
+
+
+</div>

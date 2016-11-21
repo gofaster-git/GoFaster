@@ -1,0 +1,36 @@
+{
+  "name": "AngularizeWebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "angular-resource": "^1.4.7",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.14.1",
+    "cookie-parser": "^1.4.0",
+    "dhl": "^1.2.0",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "express-session": "^1.12.1",
+    "extend": "^3.0.0",
+    "https": "^1.0.0",
+    "jade": "^1.11.0",
+    "moment": "^2.16.0",
+    "mongoose": "^4.2.4",
+    "morgan": "^1.6.1",
+    "npm-git-install": "^0.2.0",
+    "passport": "^0.3.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "serve-favicon": "^2.3.0",
+    "x2js": "^3.0.1",
+    "xmlbuilder": "^8.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Mani Kumar",
+  "license": "ISC"
+}

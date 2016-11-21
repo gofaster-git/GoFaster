@@ -1,0 +1,56 @@
+﻿<div>
+    <input type="number" id="awbNumber" ng-model="awbNumber"/>
+    <input type="button" ng-click="callingTrack()" class="button" value="Track"/>
+    <!--<textarea ng-model="textArea" id="textAreaId">-->
+<!--<table class="table" ng-show="tableList.length">
+    <thead>
+        <tr>
+            <th colspan="2">Date</th>
+            <th>Location</th>
+            <th>Time</th>
+            <th>Pieces</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="rowValue in tableList[0].ShipmentInfo[0].ShipmentEvent | orderBy:'$index':true">
+            <td>{{tableList["0"].ShipmentInfo["0"].ShipmentEvent.length-$index}}, {{rowValue.Date["0"]}}</td>
+            <td>{{rowValue.ServiceEvent["0"].Description["0"]}}</td>
+            <td>{{rowValue.ServiceArea["0"].Description["0"]}}</td>
+            <td>{{rowValue.Time["0"]}}</td>
+            <td>2</td>
+        </tr>
+    </tbody>
+</table>-->
+<table class="table table-light">
+    <!--<tbody ng-repeat="group in tableList[0].ShipmentInfo[0].ShipmentEvent | groupBy: 'plannedCollectionDate' | toArray: true | orderBy: '-plannedCollectionDate'">-->
+        <tbody ng-repeat="group in headers | orderBy:''">
+        <tr style="background-color:gray">
+            <th colspan="2">
+                {{group["0"].Date["0"] | date:'fullDate'}}
+            </th>
+            <th>
+                Location
+            </th>
+            <th>
+                Time
+            </th>
+            <th>
+                Peices
+            </th>
+        </tr>
+
+        <tr ng-repeat="rowValue in group">
+            <td>
+                {{$index+1}}
+            </td>
+            <td>
+                {{rowValue.ServiceEvent["0"].Description["0"]}}
+            </td>
+            <td>{{rowValue.ServiceArea["0"].Description["0"]}}</td>
+            <td>{{rowValue.Time["0"]}}</td>
+            <td>2</td>
+        </tr>
+    </tbody>
+</table>
+<div style="margin-top:20px" ng-show="!tableList.length">Data Unavailable!</div>
+</div>
