@@ -53,8 +53,8 @@ initPassport(passport);
 
 
 //running server on node
-var server = app.listen(3000, function () {
-  var host = server.address().address;
+var server = app.listen(8080, function () {
+  var host = "ec2-52-90-14-251.compute-1.amazonaws.com"//server.address().address;
   var port = server.address().port;
   console.log('Example app listening at http://', host, port);
 });
