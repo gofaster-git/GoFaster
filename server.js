@@ -25,6 +25,8 @@ var app = express();
 app.set('views', path.join(__dirname, 'Views'));
 app.set('view engine', 'ejs');
 app.set('port', process.env.PORT || 8080);
+process.env.HOST = "ec2-52-90-14-251.compute-1.amazonaws.com";
+app.set('host', process.env.HOST || 'ec2-52-90-14-251.compute-1.amazonaws.com');
 
 //tell node the global configuration about parser,logger and passport
 app.use(cookieParser());
