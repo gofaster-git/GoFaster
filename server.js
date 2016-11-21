@@ -54,7 +54,11 @@ initPassport(passport);
 
 
 //running server on node
-var server = app.listen(app.get('port'));
+var server = app.listen(app.get('port')), function () {
+	var host = server.address().address;
+        var port = server.address().port;
+	console.log('Listening on ',host,port);
+};
 //var server = app.listen(8080, function () {
 //  var host = server.address().address;
 //  var port = server.address().port;
