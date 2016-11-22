@@ -1,8 +1,13 @@
 {
   "name": "GoFaster",
   "version": "1.0.0",
-  "description": "",
+  "private": false,
+  "description": "GoFaster Mobile App",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gofaster-git/GoFaster.git"
+  },
   "dependencies": {
     "angular-resource": "^1.4.7",
     "bcrypt-nodejs": "0.0.3",
