@@ -13,7 +13,7 @@ var mongoose = require('mongoose');
 var models_user = require('./Angular/Models/user.js');
 var x2js = require('x2js');
 //connection database
-mongoose.connect('mongodb://localhost/globaltracker');
+mongoose.connect('mongodb://ec2-54-145-240-253.compute-1.amazonaws.com/globaltracker');
 
 //import the routers
 var router = require('./Routes/router');

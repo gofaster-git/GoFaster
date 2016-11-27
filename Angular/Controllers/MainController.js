@@ -1,4 +1,4 @@
-﻿//main controller
+//main controller
 main.controller("MainController", ['$scope', '$http', '$rootScope','$uibModal', function ($scope, $http, $rootScope,modalWindow) {
     var $ctrl = this;
     var modalScope = $scope.$new();
@@ -17,7 +17,7 @@ main.controller("MainController", ['$scope', '$http', '$rootScope','$uibModal', 
     }
     else
     {
-      $http.get('http://localhost:3000/trackitem?AWBNumber='+ $scope.awbNumber)
+      $http.get('http://ec2-54-145-240-253.compute-1.amazonaws.com:3000/trackitem?AWBNumber='+ $scope.awbNumber)
       .success(function(data){
       //$scope.tableList = data["req:TrackingResponse"].AWBInfo;
       //Get the ShipmentEvent List
